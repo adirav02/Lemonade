@@ -89,16 +89,13 @@ fun TitleAndImage(modifier: Modifier = Modifier) {
                 .clickable(
                     onClick = {
                         when (step) {
-                            1 -> {
+                            1, 3 -> {
                                 step++
                             }
                             2 -> {
                                 clickCounts++
                                 if (clickCounts == maxClicksToSqueeze)
                                     step++
-                            }
-                            3 -> {
-                                step++
                             }
                             else -> {
                                 step = 1
